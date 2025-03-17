@@ -4,72 +4,167 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Stars Roleplay - Infografía</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0; 
-      padding: 0; 
-      background: #121212; 
-      color: #f0f0f0; 
-      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #08041a; /* Fondo oscuro principal */
+      color: #f0f0f0;
+      font-family: 'Montserrat', sans-serif; /* Fuente moderna y legible */
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIElEQVQIW2NkYGD4z8DAwMgAAjMA4AVYgf8AAAAASUVORK5CYII='); /* Patrón sutil de estrellas */
+      background-repeat: repeat;
+      background-size: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
+
     .container {
-      max-width: 800px; 
-      margin: 20px auto; 
-      background: #1f1f1f; 
-      padding: 20px; 
-      border-radius: 8px;
+      max-width: 900px; /* Un poco más ancho */
+      margin: 30px;
+      background-color: rgba(20, 20, 30, 0.9); /* Fondo ligeramente transparente para el contenedor */
+      padding: 40px; /* Más padding */
+      border-radius: 15px; /* Bordes más redondeados */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada */
     }
+
     h1 {
-      text-align: center; 
-      color: #ffd700; 
-      margin-bottom: 0.5em;
+      font-family: 'Bebas Neue', sans-serif; /* Fuente de título impactante */
+      text-align: center;
+      color: #ffdd57; /* Dorado más brillante y neon */
+      margin-bottom: 0.6em;
+      text-shadow: 0 0 10px #ffdd57, 0 0 5px #ffdd57; /* Efecto de resplandor neon */
+      font-size: 3.5em; /* Título más grande */
+      letter-spacing: 2px;
     }
-    h2, h3, p, ul {
-      margin-top: 0; 
-      margin-bottom: 1em;
+
+    p, ul {
+      margin-top: 0;
+      margin-bottom: 1.3em;
+      line-height: 1.7;
+      color: #e0e0e0; /* Gris claro para el texto principal */
     }
+
     .section-title {
-      font-size: 1.2em; 
-      font-weight: bold; 
-      margin-top: 1.5em; 
-      border-bottom: 1px solid #ffd700; 
-      padding-bottom: 5px;
+      font-family: 'Bebas Neue', sans-serif; /* Fuente de título para secciones */
+      font-size: 2.2em; /* Títulos de sección más grandes */
+      color: #64b5f6; /* Azul neon para títulos de sección */
+      margin-top: 1.2em;
+      margin-bottom: 0.7em;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #64b5f6; /* Línea azul neon más gruesa */
+      letter-spacing: 1px;
+      text-shadow: 0 0 8px #64b5f6; /* Resplandor azul neon */
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
+    .section-title::before {
+      content: ''; /* Espacio para el icono */
+      font-size: 1.5em; /* Ajusta el tamaño del icono si es necesario */
+    }
+
+    /* Iconos de sección (puedes usar Font Awesome o iconos SVG aquí) */
+    .section-title.facciones-legales::before { content: '🏛️'; }
+    .section-title.facciones-ilegales::before { content: '🐲'; }
+    .section-title.trabajos-disponibles::before { content: '🛠️'; }
+    .section-title.eventos-unicos::before { content: '🎉'; }
+    .section-title.recompensas-amigos::before { content: '🎁'; }
+    .section-title.creadores-contenido::before { content: '🎬'; }
+    .section-title.informacion::before { content: '🚀'; }
+
+
     ul {
-      list-style: none; 
+      list-style: none;
       padding: 0;
     }
+
     li {
-      margin: 0.3em 0;
+      margin: 0.6em 0;
+      padding-left: 1.5em;
+      position: relative;
+      color: #d0d0d0; /* Gris un poco más oscuro para los items de lista */
     }
+
+    li::before {
+      content: "•"; /* Bullet personalizado */
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #ffdd57; /* Bullet dorado neon */
+      font-size: 1.2em;
+    }
+
     a {
-      color: #ffd700; 
+      color: #ffdd57; /* Dorado neon para enlaces */
       text-decoration: none;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
     }
+
+    a:hover {
+      color: #ffff8d; /* Dorado neon más brillante en hover */
+      text-shadow: 0 0 10px #ffff8d; /* Resplandor más intenso en hover */
+    }
+
     .link-button {
-      display: inline-block; 
-      padding: 0.5em 1em; 
-      background: #ffd700; 
-      color: #121212; 
-      border-radius: 4px;
+      display: inline-block;
+      padding: 0.8em 2em;
+      background-color: #ffdd57; /* Fondo dorado neon para botones */
+      color: #1a1a1a; /* Texto oscuro para botones */
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      box-shadow: 0 0 10px #ffdd57, 0 0 5px #ffdd57; /* Resplandor neon en botones */
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      margin-top: 0.8em;
+      animation: pulsate 1.5s infinite alternate; /* Animación de pulsación */
     }
+
     .link-button:hover {
-      background: #ffbf00;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ffff8d, 0 0 8px #ffff8d; /* Resplandor más intenso en hover */
+      animation-play-state: paused; /* Pausa la pulsación en hover */
+    }
+
+    @keyframes pulsate {
+      0% { box-shadow: 0 0 10px #ffdd57, 0 0 5px #ffdd57; }
+      100% { box-shadow: 0 0 15px #ffdd57, 0 0 8px #ffdd57; }
+    }
+
+
+    .section {
+      background-color: rgba(30, 30, 40, 0.7); /* Fondo más oscuro para secciones */
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 1.8em;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra suave para secciones */
+    }
+
+    .separator {
+      border-bottom: 4px dashed #64b5f6; /* Separador azul neon más grueso y llamativo */
+      margin: 2.5em 0;
+    }
+
+    .button-small { /* NUEVO CSS PARA BOTONES PEQUEÑOS */
+      padding: 0.5em 1.2em;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <h1>⭐ STARS ROLEPLAY - ¡Una experiencia inolvidable y única! ⭐</h1>
+  <h1>⭐STARS ROLEPLAY - ¡EXPERIENCIA ÚNICA!⭐</h1>
   <p>
-    Forma parte de <strong>Stars RolePlay</strong>, para sumergirte en un mundo donde tus decisiones moldean tu destino y cada rol importa.
+    Únete a <strong>Stars RolePlay</strong> y sumérgete en un mundo donde tus decisiones forjan tu destino. ¡Cada rol cuenta en esta aventura inolvidable!
   </p>
 
-  <div class="section-title">🎓 FACCIONES LEGALES</div>
-  <ul>
+  <div class="separator"></div>
+
+  <div class="section section-title facciones-legales">🏛️ FACCIONES LEGALES</div>
+  <ul class="section">
     <li>🏛️ <strong>Gobierno</strong></li>
     <li>💂‍♀️ <strong>Militar</strong></li>
     <li>🕵️‍♀️ <strong>FBI</strong></li>
@@ -78,15 +173,20 @@
     <li>📰 <strong>Stars-TV</strong></li>
   </ul>
 
-  <div class="section-title">🐲 FACCIONES ILEGALES</div>
-  <ul>
+  <div class="separator"></div>
+
+  <div class="section section-title facciones-ilegales">🐲 FACCIONES ILEGALES</div>
+  <ul class="section">
     <li>💀 <strong>Casino The Four Dragon</strong></li>
     <li>🏴‍☠️ <strong>Grove Street</strong></li>
     <li>🔪 <strong>Los Ballas (se busca lider)</strong></li>
+
   </ul>
 
-  <div class="section-title">⚡ TRABAJOS DISPONIBLES</div>
-  <ul>
+  <div class="separator"></div>
+
+  <div class="section section-title trabajos-disponibles">🛠️ TRABAJOS DISPONIBLES</div>
+  <ul class="section">
     <li>🚮 <strong>Basurero</strong></li>
     <li>🚛 <strong>Carguero</strong></li>
     <li>🔨 <strong>Carpintero</strong></li>
@@ -99,40 +199,53 @@
     <li>⛏️ <strong>Minero</strong></li>
   </ul>
 
-  <div class="section-title">🎉 EVENTOS ÚNICOS Y DIARIOS</div>
-  <p>
-    Participa en múltiples eventos semanales, como <strong>Sorteos</strong>, <strong>Paydays</strong>, <strong>EXP x2 - x3</strong> y muchos más, para mejorar tu experiencia y estadía en el servidor.
-  </p>
+  <div class="separator"></div>
 
-  <div class="section-title">🍀 RECOMPENSAS POR INVITAR AMIGOS</div>
-  <p>
-    Invita a tus amigos a <strong>Stars Roleplay</strong> para recibir recompensas como <strong>Dinero, Coins, Propiedades</strong> y hacer un mejor lugar cada día.
-  </p>
+  <div class="section section-title eventos-unicos">🎉 EVENTOS ÚNICOS Y DIARIOS</div>
+  <div class="section">
+    <p>
+      ¡No te pierdas los eventos semanales! <strong>Sorteos épicos</strong>, <strong>Paydays jugosos</strong>, <strong>EXP x2 - x3</strong> y muchas sorpresas más te esperan para enriquecer tu aventura en el servidor.
+    </p>
+  </div>
 
-  <div class="section-title">📹 ESTAMOS BUSCANDO CREADORES DE CONTENIDOS - CREWS Y GRUPOS</div>
-  <ul>
+  <div class="separator"></div>
+
+  <div class="section section-title recompensas-amigos">🎁 RECOMPENSAS POR INVITAR AMIGOS</div>
+  <div class="section">
+    <p>
+      ¡Trae a tus amigos a <strong>Stars Roleplay</strong> y gana premios increíbles! <strong>Dinero, Coins, Propiedades exclusivas</strong> y juntos construyamos una comunidad aún más grande y genial.
+    </p>
+  </div>
+
+  <div class="separator"></div>
+
+  <div class="section section-title creadores-contenido">🎬 BUSCAMOS CREADORES DE CONTENIDO</div>
+  <ul class="section">
     <li>
-      Puedes apelar el rango <strong>Creador de Contenido</strong>, enviando un mensaje a MD 
-      <span style="color: #ffd700;">eltatitomc</span>, para recibir más información.
+      ¿Eres streamer o creador de videos? ¡Aplica para el rango <strong>Creador de Contenido</strong>!  Envía MD a  <span style="color: #ffdd57;">@eltatitomc</span> para más info.
     </li>
     <li>
-      Puedes postularte a una facción, abriendo ticket en 
-      <a href="https://discord.gg/vpsSMGgKmN" class="link-button">Postular a Facción</a>.
+      ¡Únete a una facción! Postúlate abriendo ticket:
+      <a href="https://discord.gg/vpsSMGgKmN" class="link-button button-small">Postular a Facción</a>.
     </li>
     <li>
-      Puedes postularte a un grupo, abriendo ticket en 
-      <a href="https://discord.gg/vpsSMGgKmN" class="link-button">Postular a Grupo</a>.
+      ¡Forma parte de un grupo! Postúlate aquí:
+      <a href="https://discord.gg/vpsSMGgKmN" class="link-button button-small">Postular a Grupo</a>.
     </li>
   </ul>
 
-  <div class="section-title">🚀 INFORMACIÓN</div>
-  <p><strong>Server IP:</strong> stars-rp.com:7777</p>
-  <p><strong>Discord:</strong> <a href="https://discord.gg/Yr2FkYVAZ6">Únete aquí</a></p>
-  <p>
-    <strong>Compatible con PC y Android:</strong> 
-    <a href="https://www.sa-mp.mp/server/213.199.44.227:7777/">Launcher SA-MP</a> o 
-    <a href="https://www.open.mp/servers/213.199.44.227:7777">Open.MP</a>
-  </p>
+  <div class="separator"></div>
+
+  <div class="section section-title informacion">🚀 INFORMACIÓN IMPORTANTE</div>
+  <div class="section">
+    <p><strong>Server IP:</strong> <code>stars-rp.com:7777</code></p>
+    <p><strong>Comunidad Discord:</strong> <a href="https://discord.gg/Yr2FkYVAZ6">¡Únete ahora!</a></p>
+    <p>
+      <strong>Compatibilidad Total:</strong> PC y Android. ¡Elige tu launcher!:
+      <a href="https://www.sa-mp.mp/server/213.199.44.227:7777/">Launcher SA-MP</a>  |
+      <a href="https://www.open.mp/servers/213.199.44.227:7777">Open.MP</a>
+    </p>
+  </div>
 
 </div>
 
